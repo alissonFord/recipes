@@ -1,0 +1,23 @@
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alissonFord/recipes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alissonFord/recipes/issues"
+  },
+  "homepage": "https://github.com/alissonFord/recipes#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "browserslist": ["last 1 chrome versions"]
+}
