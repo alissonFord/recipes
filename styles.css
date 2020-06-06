@@ -59,6 +59,11 @@ button[disabled] {
   padding: 20px;
 }
 
+.main, .vege, .adds{ 
+  color: white;
+  background: var(--red);
+}
+
 a.button, button, input[type="button"] {
   color: white;
   background: var(--yellow);

@@ -1,11 +1,23 @@
-const apiAddress = 'http://www.recipepuppy.com/api';
+const apiAddress = 'http://www.recipepuppy.com/api/';
 const proxy = 'https://cors-anywhere.herokuapp.com/';
 const form = document.querySelector('form.search');
 const recipesGrid = document.querySelector('.recipes');
+const customize = document.querySelectorAll('[type=checkbox]');
 
+function checkIgredients() {
+    let url = '?i=';
+    customize.forEach(checkbox => {
+        if(checkbox.checked) {
+            url += checkbox.id;
+            console.log(url);
+        }
+    });
+    return url;
+}
 
 async function getRecipes(plate) {
-    const query = `${proxy}${apiAddress}?q=${plate}`;
+    const ingredients = checkIgredients();
+    const query = `${proxy}${apiAddress}${ingredients}&q=${plate}`;
     const rawData = await fetch(query);
     const results = await rawData.json();
     return results;
