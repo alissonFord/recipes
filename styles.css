@@ -19,7 +19,8 @@ html {
 
 body {
   font-size: 2rem;
-  line-height: 1.5;
+  height: 100%;
+  background-size: cover;
   background-image: url("food.jpg");
 }
 
@@ -68,14 +69,17 @@ input {
 .recipes {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 10px;
   background-color: #EBEBE4;
-  padding: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .recipe {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .main, .vege, .adds{ 
@@ -83,7 +87,6 @@ input {
   background: var(--red);
   
 }
-
 
 a.button, button, input[type="button"] {
   color: white;
