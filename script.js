@@ -16,6 +16,7 @@ function checkIgredients() {
 }
 
 async function getRecipes(plate) {
+    console.log('getRecipes');
     const ingredients = checkIgredients();
     const query = `${proxy}${apiAddress}${ingredients}&q=${plate}`;
     const rawData = await fetch(query);
@@ -28,8 +29,6 @@ function displayData(recipes) {
         `<div class="recipe">
             <h2>${ recipe.title }</h2>
             <p>${ recipe.ingredients}</p>
-            ${ recipe.thumbnail &&
-                `<img src="${ recipe.thumbnail }" alt="${ recipe.title }"/>`}
             <a href="${ recipe.href }">See the recipe</a>
         </div>`
     );
@@ -40,6 +39,7 @@ function displayData(recipes) {
 async function handleQuery(event) {
     event.preventDefault();
     const q = form.query.value;
+    console.log(q);
     form.submit.disabled = true;
     const data = await getRecipes(q);
     console.log(data);
